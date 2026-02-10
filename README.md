@@ -1,5 +1,3 @@
-Bank Statement Transaction Categorization System
-
 
 This project is a Java & Spring Boot–based web application that uses AI techniques to automatically analyze and categorize bank statement transactions. Bank statements often contain unstructured and unclear transaction descriptions, making manual expense tracking difficult.
 
