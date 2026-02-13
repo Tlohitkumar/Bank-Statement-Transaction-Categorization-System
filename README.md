@@ -1,31 +1,80 @@
-# Bank Statement Transaction Categorization System
+# 🏦 Bank Statement Transaction Categorization System
 
-This project is a Java & Spring Boot–based web application that uses AI techniques to automatically analyze and categorize bank statement transactions. Bank statements often contain unstructured and unclear transaction descriptions, making manual expense tracking difficult.
+This is a Java & Spring Boot–based web application that uses AI/NLP techniques to automatically analyze and categorize bank statement transactions. It helps users easily understand their spending patterns by processing uploads and categorizing expenses like Food, Travel, Shopping, Utilities, Rent, and more. :contentReference[oaicite:2]{index=2}
 
-The system processes uploaded bank statements, extracts transaction details, and intelligently classifies them into categories such as Food, Travel, Shopping, Utilities, Rent, and Others. By leveraging AI/NLP-based keyword analysis and machine learning, the application helps users clearly understand their spending patterns.
+---
 
-🔑 Key Features
+## 📌 Key Features
 
-Upload and process bank statements (CSV / PDF)
+- Upload and process bank statements (CSV / PDF)  
+- Automatic AI/NLP-based transaction classification  
+- Category-wise expense insights  
+- Secure backend with Spring Boot  
+- User-friendly web interface :contentReference[oaicite:3]{index=3}
 
-Automatic transaction categorization using AI
+---
 
-Expense analysis with category-wise insights
+## 🏗️ Architecture
 
-Secure backend built with Spring Boot
+<p align="center">
+  <img src="C:\Users\lohit\Pictures\Screenshots\architecture.png" width="700"/>
+</p>
 
-User-friendly web interface
+### 🧠 Architecture Overview
 
-🛠 Tech Stack
+This diagram shows the logical flow:
 
-Backend: Java, Spring Boot, REST APIs, Spring Data JPA
+- **Frontend** sends requests to REST API  
+- **Backend (Spring Boot)** handles parsing & categorization  
+- **AI/NLP Engine** analyzes descriptions  
+- **Database** stores categorized transactions
 
-AI: NLP / Machine Learning for transaction classification (ChatGPT), OAUTH2
+---
 
-Database: MySQL, PostgreSQL
+## 🔄 Workflow
 
-Frontend: HTML, CSS, JavaScript
+<p align="center">
+  <img src="images/workflow.png" width="700"/>
+</p>
 
-Tools: Git, Maven
+### 🧩 How It Works
 
-This project aims to simplify financial tracking and provide clear spending insights through intelligent automation
+1. User uploads statement (CSV or PDF)  
+2. Backend extracts text from file  
+3. Extracted data processed into transactions  
+4. AI/NLP categorizes each transaction  
+5. Categorized data is stored & shown to user
+
+---
+
+## 🚀 Production Deployment
+
+<p align="center">
+  <img src="C:\Users\lohit\Pictures\Screenshots\production.png" width="700"/>
+</p>
+
+### 📦 Deployment Stack
+
+- Backend: Spring Boot  
+- Server: AWS / Azure / Heroku (your setup)  
+- Database: MySQL / PostgreSQL  
+- Build: Maven  
+- AI: NLP + Machine Learning
+
+---
+
+## 🛠️ Tech Stack
+
+- Java  
+- Spring Boot  
+- REST APIs  
+- AI / NLP Analysis  
+- MySQL, PostgreSQL  
+- Maven  
+- HTML, CSS, JavaScript (Frontend) :contentReference[oaicite:4]{index=4}
+
+---
+
+## 📂 Project Structure
+
+
