@@ -2,7 +2,6 @@ package com.example.bankstatement.controller;
 
 import java.util.List;
 
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -37,14 +36,18 @@ public class UploadController {
         }
 
         try {
-            // 1️⃣ Extract PDF text
+
+            // 1️⃣ Clear previous transactions (fresh start)
+            transactionRepository.deleteAll();
+
+            // 2️⃣ Extract text from PDF
             String pdfText = pdfService.extractText(file);
 
-            // 2️⃣ Parse transactions
+            // 3️⃣ Parse transactions
             List<Transaction> transactions =
                     parsingService.parseTransactions(pdfText);
 
-            // 3️⃣ Save all transactions to DB
+            // 4️⃣ Save transactions
             transactionRepository.saveAll(transactions);
 
             System.out.println("Saved transactions count: " + transactions.size());
